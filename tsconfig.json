@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "lib": ["esnext"],
+    "removeComments": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
