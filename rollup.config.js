@@ -1,5 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 import path from 'path';
+import externals from 'rollup-plugin-node-externals';
 import del from 'rollup-plugin-delete';
 import dts from 'rollup-plugin-dts';
 
@@ -17,11 +18,11 @@ export default [
         declaration: true,
         declarationDir: 'dts'
       }),
+      externals(),
     ],
     output: [
       { file: pkg.main, format: 'cjs', sourcemap: true },
     ],
-    external: [/@nestjs\/.*/, /node:.*/, 'uuid', 'lodash'],
   },
   // bundle all type definitions into one file
   {
